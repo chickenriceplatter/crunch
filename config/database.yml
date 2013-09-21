@@ -1,0 +1,6 @@
+development:
+  adapter: postgresql
+  database: crunch_development
+  username: dave
+  password:
+  host: localhost
