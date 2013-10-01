@@ -1,4 +1,5 @@
 class Season < ActiveRecord::Base
+	has_one :ratio
   has_many :records
   has_many :stats
 	has_many :memberships

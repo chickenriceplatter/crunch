@@ -5,7 +5,7 @@ namespace :read_csv do
 	desc 'read in total team stats season by season'
 	task :team => :environment do
 
-		(1979..2011).each do |year|
+		(1979..2012).each do |year|
 
 			puts year
 
@@ -51,7 +51,7 @@ namespace :read_csv do
 	desc 'read in player stats season by season'
 	task :player => :environment do
 
-		(1979..2011).each do |year|
+		(1979..2012).each do |year|
 
 			puts year
 

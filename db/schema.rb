@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130918031001) do
+ActiveRecord::Schema.define(:version => 20130925123601) do
+
+  create_table "conversions", :force => true do |t|
+    t.string   "year"
+    t.string   "player_name"
+    t.float    "field_goals_made"
+    t.float    "field_goals_attempted"
+    t.float    "three_pointers_made"
+    t.float    "three_pointers_attempted"
+    t.float    "free_throws_made"
+    t.float    "free_throws_attempted"
+    t.float    "offensive_rebounds"
+    t.float    "defensive_rebounds"
+    t.float    "total_rebounds"
+    t.float    "assists"
+    t.float    "steals"
+    t.float    "blocks"
+    t.float    "turnovers"
+    t.float    "points_scored"
+    t.float    "true_point_value"
+    t.integer  "stat_id"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
 
   create_table "memberships", :force => true do |t|
     t.integer  "season_id"
@@ -37,6 +60,27 @@ ActiveRecord::Schema.define(:version => 20130918031001) do
     t.string   "college"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "ratios", :force => true do |t|
+    t.string   "year"
+    t.float    "field_goals_made"
+    t.float    "field_goals_attempted"
+    t.float    "three_pointers_made"
+    t.float    "three_pointers_attempted"
+    t.float    "free_throws_made"
+    t.float    "free_throws_attempted"
+    t.float    "offensive_rebounds"
+    t.float    "defensive_rebounds"
+    t.float    "total_rebounds"
+    t.float    "assists"
+    t.float    "steals"
+    t.float    "blocks"
+    t.float    "turnovers"
+    t.float    "points_scored"
+    t.integer  "season_id"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
   end
 
   create_table "records", :force => true do |t|

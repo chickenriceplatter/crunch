@@ -1,4 +1,5 @@
 class Stat < ActiveRecord::Base
+	has_one :conversion
   belongs_to :season
   belongs_to :player
 
@@ -42,6 +43,10 @@ class Stat < ActiveRecord::Base
 		total += blocks * season.blocks_point_value
 		total -= turnovers * season.turnovers_point_value
 		total
+	end
+
+	def sb
+		steals + blocks
 	end
 
 end
