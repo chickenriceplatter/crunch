@@ -61,6 +61,14 @@ class Season < ActiveRecord::Base
 		total_points_scored.to_f / total_rebounds
 	end
 
+	def points_per_game
+		total_points_scored / total_number_of_games.to_f / 2
+	end
+
+	def threes_attempted_per_game
+		total_three_pointers_attempted / total_number_of_games.to_f / 2
+	end
+
 
 
 	# def method_missing(method)
